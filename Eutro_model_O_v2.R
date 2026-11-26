@@ -1,4 +1,4 @@
-install.packages("deSolve")
+# Requires the deSolve package. Install it once with install.packages("deSolve").
 library(deSolve)
 
 eutrophication_model <- function(t, state, parameters) {
@@ -80,7 +80,9 @@ results_long <- data.frame(
 #   labs(title = "Eutrophication Model Results over Time", x = "Time (days)", y = "Concentration") +
 #   facet_wrap(~ Variable, scales = 'free_y')
 
-calibration_data <- read.csv("C:/Users/alex/Downloads/Calibration_data.csv")
+# The calibration block below reads Calibration_data.csv from the working directory.
+# Place the course calibration file there before running this section.
+calibration_data <- read.csv("Calibration_data.csv")
 
 library(tidyr)
 
